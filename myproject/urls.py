@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import all_news, detail, YangiliklarList
+from .views import all_news, detail, YangiliklarList, FilmlarList
 
 urlpatterns = [
     path('all_news/', all_news, name='news'),
@@ -7,5 +7,6 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('yangiliklar-list/', YangiliklarList.as_view(), name='Yangiliklar-list')
+    path('yangiliklar-list/', YangiliklarList.as_view(), name='Yangiliklar-list'),
+    path('filmlar-api/', FilmlarList.as_view(), name='Filmlar-list')
 ]
